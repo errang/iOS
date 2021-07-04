@@ -97,3 +97,38 @@ let myDogName: String? = hasAllergies ? nil : "Mango"
 let parsedInt = Int("10")
 
 let newParsedInt = Int("cat")
+
+let studentMark: (String, Int) = ("Chris", 49)
+
+print(studentMark.0)
+print(studentMark.1)
+
+let studentData: (name: String, mark: Int, petName: String) = (name: "Chris", mark: 49, petName: "Mango")
+
+let (name, mark, pet) = studentData
+
+let specialDate = (6, 3, 2019, "WWDC")
+let specialDateDesc = (month: 6, day: 3, year: 2019, description: "WWDC")
+
+let (_, day, _, description) = specialDateDesc
+
+var specialDateVar = (6, 3, 2019, "WWDC")
+specialDateVar.1 = 9
+
+print(specialDateVar)
+
+var pastries: [String] = []
+pastries.append("cookie")
+pastries += ["cupcake", "brownie"]
+
+print(pastries)
+
+var firstTwo = pastries[1...2]
+print(firstTwo)
+
+pastries[1] = "muffin"
+
+print(firstTwo)
+print(pastries)
+
+pastries.contains("cookie")
