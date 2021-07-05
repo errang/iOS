@@ -119,7 +119,7 @@ print(specialDateVar)
 
 var pastries: [String] = []
 pastries.append("cookie")
-pastries += ["cupcake", "brownie"]
+pastries += ["cupcake", "brownie", "pie"]
 
 print(pastries)
 
@@ -132,3 +132,57 @@ print(firstTwo)
 print(pastries)
 
 pastries.contains("cookie")
+
+var i = 10
+
+while i < 10 {
+    print(i)
+    i += 1
+}
+
+print("Counting up again")
+
+i = 10
+
+repeat {
+    print(i)
+    i += 1
+} while i < 10
+
+var count = 0
+
+while count < 10 {
+    print("Counting up \(count)")
+    count += 1
+}
+
+print(count)
+
+repeat {
+    print("Counting down \(count)")
+    count -= 1
+} while count > 0
+
+var roll = 0
+var rollCount = 0
+
+while roll != 6 {
+    roll = Int.random(in: 1...6)
+    rollCount += 1
+    print("Roll: \(rollCount) gives you a \(roll)")
+}
+
+for i in 1...Int.random(in: 1...5){
+    print(i)
+}
+
+let daysOfTheWeek: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let poolTemperature: [Int] = [78, 81, 74, 80, 79, 83, 84]
+
+for i in 0..<daysOfTheWeek.count {
+    print("\(daysOfTheWeek[i]): \(poolTemperature[i])")
+}
+
+for pastry in pastries where pastry.count <= 5{
+    print(pastry)
+}
