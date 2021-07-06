@@ -186,3 +186,18 @@ for i in 0..<daysOfTheWeek.count {
 for pastry in pastries where pastry.count <= 5{
     print(pastry)
 }
+
+var namesAndPets = ["Chris" : "Mango"]
+
+print(namesAndPets)
+
+namesAndPets["Sudhee"] = "Snowball"
+
+for entry in namesAndPets.keys {
+    print(namesAndPets[entry] ?? "Nothing")
+}
+
+var someSet: Set<Int> = [1, 2, 3, 4, 5]
+
+someSet.contains(1)
+
