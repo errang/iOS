@@ -201,3 +201,69 @@ var someSet: Set<Int> = [1, 2, 3, 4, 5]
 
 someSet.contains(1)
 
+func printHello() {
+    print("Hello, world!")
+}
+
+printHello()
+
+func printSomethingElse(str: String) {
+    print(str)
+}
+
+printSomethingElse(str: "Hi")
+
+func printSomethingElse(that str: String) {
+    print(str)
+}
+
+printSomethingElse(that: "hey")
+
+typealias Student = (name: String, grade: Int, pet: String?)
+
+var sudhee: Student
+
+sudhee.name = "Sudhee"
+sudhee.grade = 100
+sudhee.pet = nil
+
+print(sudhee)
+
+struct StudentStruct {
+    let name: String
+    var grade: Int
+    var pet: String?
+    
+    func getPassStatus(lowestPass: Int = 50) -> Bool {
+        grade > lowestPass
+    }
+    
+    mutating func earnExtraCredit() {
+        grade += 10
+    }
+}
+
+var sudheeStudnetStruct = StudentStruct(name: "Sudhee", grade: 49, pet: nil)
+sudheeStudnetStruct.getPassStatus()
+sudheeStudnetStruct.earnExtraCredit()
+sudheeStudnetStruct.getPassStatus()
+
+class Actor {
+    let name: String
+    var filmography: [String] = []
+    
+    init (name: String, filmography: [String]) {
+        self.name = name
+        self.filmography = filmography
+    }
+    
+    func signOnForSequel(franchiseName: String) {
+        filmography.append("Upcoming \(franchiseName) sequel")
+    }
+}
+
+var gotgStar = Actor(name: "Zoe Saldana", filmography: ["Guardians of the Galaxy"])
+gotgStar.filmography.append("Avatar")
+let starTrekStar = gotgStar.filmography.append("Star Trek")
+
+print(gotgStar.filmography)
